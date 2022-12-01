@@ -3,12 +3,12 @@ import random
 
 from accessify import protected
 
-# import os
+import os
 
-# try:
-    # os.environ["DISPLAY"]
-# except:
-    # os.environ["SDL_VIDEODRIVER"] = "dummy"
+try:
+    os.environ["DISPLAY"]
+except:
+    os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 # Импорт модуля отрисовки
 import drawing
