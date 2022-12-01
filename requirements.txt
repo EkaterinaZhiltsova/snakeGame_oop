@@ -1,3 +1,4 @@
+accessify==0.3.1
 keyboard==0.13.5
 mock==4.0.3
 pyaes==1.6.1
