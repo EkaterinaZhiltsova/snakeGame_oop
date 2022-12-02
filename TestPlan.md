@@ -305,7 +305,7 @@ def test_losing_situation_negative_2 (self)
 Ожидаемый результат: True  
 Тест пройден  
 
-5.	Блочный тест на метод Snake.collision_check _with (позитивный)  
+5.	Блочный тест на метод Snake.collision_check_with (позитивный)  
 def test_not_collision_check _with_positive(self)  
 Проверка assertFalse():False – ситуация не проигрышная (Змейки не врезаются)  
 Входные данные:  
@@ -314,7 +314,7 @@ def test_not_collision_check _with_positive(self)
 Ожидаемый результат: False  
 Тест пройден  
 
-6.	Блочный тест на метод Snake.collision_check _with (негативный)  
+6.	Блочный тест на метод Snake.collision_check_with (негативный)  
 def test_collision_check_with_negative_1(self)  
 Проверка assertTrue ():True - ситуация проигрышная (Змейка врезалась в другую)  
 Входные данные:  
@@ -323,7 +323,7 @@ def test_collision_check_with_negative_1(self)
 Ожидаемый результат: True  
 Тест пройден  
 
-7.	Блочный тест на метод Snake.collision_check _with (негативный)  
+7.	Блочный тест на метод Snake.collision_check_with (негативный)  
 def test_collision_check_with_negative_2(self)  
 Проверка assertTrue ():True - ситуация проигрышная (Змейка врезалась в себя)  
 Входные данные:  
@@ -399,7 +399,7 @@ def test_unit_independent_snake_movement_negative(self)
 Ожидаемый результат: (0, 0) -> нет возможных перемещений  
 Тест пройден  
 
-16.	Блочный тест на метод Food.__init__ (позитивный)  
+16.	Блочный тест на метод Food.\__init__ (позитивный)  
 def test_random_food_position_when_init_positive(self)  
 Проверка assertTrue (): True - функция выдает подходящие случайные значения для размещения еды внутри игрового поля  
 Входные данные:  
@@ -409,7 +409,7 @@ def test_random_food_position_when_init_positive(self)
 Ожидаемый результат: True  
 Тест пройден  
 
-17.	Блочный тест на метод Food.__init__ (негативный)  
+17.	Блочный тест на метод Food.\__init__ (негативный)  
 def test_random_food_position_when_init_negative(self)  
 Проверка assertTrue (): True – функция выдает подходящие случайные значения для размещения еды внутри игрового поля, указанного в значениях width и height  
 Входные данные:  
