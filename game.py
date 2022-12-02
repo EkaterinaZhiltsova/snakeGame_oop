@@ -140,11 +140,14 @@ class CompetitorSnake(Snake):
                 self.x_change = 0
             else:
                 print("No possible moves")
+                
+    # @staticmethod
+    # def static_check_can_move(competitor_list, x, y, controlled_list):
+        # comp_snake = CompetitorSnake(competitor_list)
+        # return comp_snake._can_take_a_step(x, y, controlled_list)
 
-    @staticmethod
-    def static_check_can_move(competitor_list, x, y, controlled_list):
-        comp_snake = CompetitorSnake(competitor_list)
-        return comp_snake._can_take_a_step(x, y, controlled_list)
+    def check_can_move(self, x, y, controlled_list):
+        return self._can_take_a_step(x, y, controlled_list)
 
 
 # Класс: еда (яблоко)
