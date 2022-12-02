@@ -143,19 +143,23 @@ class TestGame(unittest.TestCase):
             self.assertEqual(
                 (competitor_snake.x_change, competitor_snake.y_change),
                 (0, 0))
-
-    # Блочные тесты на protected метод Snake._can_take_a_step
+     
+    # Блочные тесты на protected метод Snake._can_take_a_step через метод check_can_move
     # Позитивный тест
     def test_can_take_a_step_positive(self):
-        # competitor_snake = game.CompetitorSnake([[250.0, 200.0], [260.0, 200.0]])
+        competitor_snake = game.CompetitorSnake([[250.0, 200.0], [260.0, 200.0]])
         # self.assertTrue(competitor_snake._can_take_a_step(270.0, 200.0, [[400.0, 200.0]]))
-        self.assertTrue(game.CompetitorSnake.static_check_can_move([[250.0, 200.0], [260.0, 200.0]],
-                                                                   270.0, 200.0, [[400.0, 200.0]]))
+
+        # self.assertTrue(game.CompetitorSnake.static_check_can_move([[250.0, 200.0], [260.0, 200.0]],
+                                                                   # 270.0, 200.0, [[400.0, 200.0]]))
+        self.assertTrue(competitor_snake.check_can_move(270.0, 200.0, [[400.0, 200.0]]))
 
     # Негативный тест
     def test_can_take_a_step_negative(self):
-        self.assertFalse(game.CompetitorSnake.static_check_can_move([[250.0, 200.0], [260.0, 200.0]],
-                                                                    270.0, 200.0, [[270.0, 200.0]]))
+        competitor_snake = game.CompetitorSnake([[250.0, 200.0], [260.0, 200.0]])
+        # self.assertFalse(game.CompetitorSnake.static_check_can_move([[250.0, 200.0], [260.0, 200.0]],
+                                                                    # 270.0, 200.0, [[270.0, 200.0]]))
+        self.assertFalse(competitor_snake.check_can_move(270.0, 200.0, [[270.0, 200.0]]))
 
     # Интеграционные тесты на метод independent_snake_movement -> вызываемый метод losing_situation
     # Позитивный тест
